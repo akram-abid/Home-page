@@ -1,0 +1,282 @@
+Fixed CSS with Hidden Overflow
+
+*, html{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-image: url('./images/5f7e50591293e6.80352486.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.wrapper {  
+    overflow: hidden;
+    height: 100vh; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    background-color: #000f1a;
+    width: 200vw;
+    height: 600px;
+    transform: translateY(65vh) translateX(-4vw) rotate(-10deg);
+    position: absolute; 
+    box-shadow: 8px -8px 8px rgba(0, 0, 0, 0.336);
+}
+
+.intro-content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;   
+}
+
+.intro-content img{
+    width: 40vw;
+    border-radius: 14px;
+    transition: transform 0.6s ease-out 0s;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.562);
+    z-index: 1;
+    will-change: transform;
+}
+
+.intro-content img:hover {
+    transition: transform 0.2s ease-in 0s;
+    transform: scale(1.03);
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #1e2e3a;
+    font-size: 18px;
+    padding: 18px 23px;
+    color: white;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.336);
+    flex: 1;
+}
+
+.text-content p , h1{
+    margin: 0px;
+}
+
+.text-content p {
+    font-size: 22px;
+}
+.icons {
+    padding: 4px 16px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+}
+
+.icons svg {
+    width: 24px;
+    fill: beige;
+    transition: fill 0.5s ease-in;
+}
+
+.icons svg:hover {
+    transition: fill 0.2s ease-out;
+    fill: rgb(0, 110, 255);
+}
+
+.icons svg:first-child {
+    width: 27px;
+}
+
+.my-work {
+
+    color: white;
+    background-color: #000f1a;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 30px 6% ;
+}
+
+.my-work h2 {
+    font-size: 32px;
+    padding: 0px 30px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 42px 36px;
+}
+
+.project {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    background-color: rgb(0, 140, 255);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.336);
+}
+
+.project * {
+    padding: 0px 0px;
+    margin: 0px;
+}
+
+
+.project img {
+    width: 100%;
+}
+
+.project p {
+    font-size: 18px;
+    padding: 6px 12px;
+    padding-bottom: 18px;
+}
+
+.name-links {
+    padding: 4px 12px;
+    display: flex;
+    gap: 8px;
+    font-size: 22px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+}
+
+.links svg{
+    fill: white;
+    width: 25px;
+}
+
+.contact {
+    background-color: rgb(0, 110, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: white;
+    gap: 34px;
+    padding: 12px 10%;
+    padding: 30px 16px;
+}
+
+.contact * {
+    margin: 0px;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contact img {
+    flex: 1;
+    width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.459);
+
+}
+
+.mails {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.con {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    gap: 8px;
+}
+.con svg {
+    fill: white;
+    width: 30px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: start;
+}
+.footer-icons svg {
+    width: 30px;
+    fill: white;
+}
+
+@media screen and (max-width: 720px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info {
+        gap: 6px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper {
+        min-height: 150vh;
+    }
+    .intro-content {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .intro-content img{
+        height: 40vh;
+        width: auto;
+    }
+
+    .text-content {
+        font-size: 12px;
+        height: 70vh;
+        border-radius: 12px;
+    }
+    .icons {
+        justify-content: center;
+    }
+
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+    .contact img {
+        width: 100vw;
+        border-radius: 0px;
+        padding-bottom: 0px;
+    }
+    .info {
+        gap: 6px;
+        font-size: 16px;
+    }
+}
