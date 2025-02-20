@@ -230,6 +230,13 @@ body {
 }
 
 @media screen and (max-width: 720px) {
+
+
+    .text-content {
+        display: block;
+        font-size: 8px;
+    }
+
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -240,7 +247,7 @@ body {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
     .wrapper {
         min-height: 150vh;
     }
